@@ -1,0 +1,16 @@
+﻿application: dorkdoc
+version: 1
+runtime: python
+api_version: 1
+
+default_expiration: '3650d'
+
+handlers:
+- url: /media
+  static_dir: _generated_media
+
+- url: /dorkdoc/static
+  static_dir: dorkdoc/static
+  
+- url: /.*
+  script: common/appenginepatch/main.py

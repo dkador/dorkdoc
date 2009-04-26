@@ -1,0 +1,8 @@
+<!-- this prints out some data about the patient -->
+Forms for patient {{ patient.medical_record_number }}
+<br/>Or <a href="form/create/step1/">create new form</a>
+<p/>
+<!-- this lets us iterate over the forms we send in from views.py -->
+{% for form in forms %}
+    {{ form.date_of_visit }} {{ form.start_time_of_visit }} {{ form.end_time_of_visit }}<br/>
+{% endfor %}
